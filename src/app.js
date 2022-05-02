@@ -153,20 +153,21 @@ app.use('/assets', express.static(__dirname + '/assets'));
 
 app.get('/success', function (req, res) {
     var query = req.query
+    
     // res.json(query);
-    query = {
-        "collection_id": "21874753905",
-        "collection_status": "approved",
-        "payment_id": "21874753905",
-        "status": "approved",
-        "external_reference": "patricio.e.arena@gmail.com",
-        "payment_type": "credit_card",
-        "merchant_order_id": "4617967805",
-        "preference_id": "469485398-d30a67f4-eebd-40a3-aacd-1c7af487a116",
-        "site_id": "MLA",
-        "processing_mode": "aggregator",
-        "merchant_account_id": "null"
-    }
+    // query = {
+    //     "collection_id": "21874753905",
+    //     "collection_status": "approved",
+    //     "payment_id": "21874753905",
+    //     "status": "approved",
+    //     "external_reference": "patricio.e.arena@gmail.com",
+    //     "payment_type": "credit_card",
+    //     "merchant_order_id": "4617967805",
+    //     "preference_id": "469485398-d30a67f4-eebd-40a3-aacd-1c7af487a116",
+    //     "site_id": "MLA",
+    //     "processing_mode": "aggregator",
+    //     "merchant_account_id": "null"
+    // }
 
     // console.log(item);
     res.render('./success/success', query);
@@ -174,20 +175,21 @@ app.get('/success', function (req, res) {
 
 app.get('/failure', function (req, res) {
     var query = req.query
+
     // res.json(query);
-    query = {
-        "collection_id": "21874753905",
-        "collection_status": "failure",
-        "payment_id": "21874753905",
-        "status": "failure",
-        "external_reference": "patricio.e.arena@gmail.com",
-        "payment_type": "credit_card",
-        "merchant_order_id": "4617967805",
-        "preference_id": "469485398-d30a67f4-eebd-40a3-aacd-1c7af487a116",
-        "site_id": "MLA",
-        "processing_mode": "aggregator",
-        "merchant_account_id": "null"
-    }
+    // query = {
+    //     "collection_id": "21874753905",
+    //     "collection_status": "failure",
+    //     "payment_id": "21874753905",
+    //     "status": "failure",
+    //     "external_reference": "patricio.e.arena@gmail.com",
+    //     "payment_type": "credit_card",
+    //     "merchant_order_id": "4617967805",
+    //     "preference_id": "469485398-d30a67f4-eebd-40a3-aacd-1c7af487a116",
+    //     "site_id": "MLA",
+    //     "processing_mode": "aggregator",
+    //     "merchant_account_id": "null"
+    // }
 
     // console.log(item);
     res.render('./failure/failure', query);
@@ -195,20 +197,21 @@ app.get('/failure', function (req, res) {
 
 app.get('/pending', function (req, res) {
     var query = req.query
+
     // res.json(query);
-    query = {
-        "collection_id": "21874753905",
-        "collection_status": "pending",
-        "payment_id": "21874753905",
-        "status": "pending",
-        "external_reference": "patricio.e.arena@gmail.com",
-        "payment_type": "ticket",
-        "merchant_order_id": "4617967805",
-        "preference_id": "469485398-d30a67f4-eebd-40a3-aacd-1c7af487a116",
-        "site_id": "MLA",
-        "processing_mode": "aggregator",
-        "merchant_account_id": "null"
-    }
+    // query = {
+    //     "collection_id": "21874753905",
+    //     "collection_status": "pending",
+    //     "payment_id": "21874753905",
+    //     "status": "pending",
+    //     "external_reference": "patricio.e.arena@gmail.com",
+    //     "payment_type": "ticket",
+    //     "merchant_order_id": "4617967805",
+    //     "preference_id": "469485398-d30a67f4-eebd-40a3-aacd-1c7af487a116",
+    //     "site_id": "MLA",
+    //     "processing_mode": "aggregator",
+    //     "merchant_account_id": "null"
+    // }
 
     // console.log(item);
     res.render('./pending/pending', query);
