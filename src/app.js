@@ -153,7 +153,7 @@ app.use('/assets', express.static(__dirname + '/assets'));
 
 app.get('/success', function (req, res) {
     var query = req.query
-    
+
     // res.json(query);
     // query = {
     //     "collection_id": "21874753905",
@@ -223,7 +223,9 @@ app.get('/payments', function (req, res) {
 
 app.post('/notifications', function (req, res) {
 
+    // console.log(req.query['data']);
     let tempFlag = (req.query.type == 'payment') ? true : false;
+    // console.log('tempFlag', tempFlag);
 
     if (tempFlag) {
         let id = req.query['data.id']
@@ -237,8 +239,9 @@ app.post('/notifications', function (req, res) {
         // #endregion
 
         var exists = payments.find(obj => obj.id == id);
+        // console.log('exists', exists);
 
-        if (exists === undefined) {
+        if (exists == undefined) {
 
             mercadopago.payment.findById(id).then(function (response) {
                 payments.push(response)
@@ -250,7 +253,7 @@ app.post('/notifications', function (req, res) {
 
     }
 
-    res.status(200)
+    res.status(200).send('Status: OK')
 });
 
 app.post('/detail', function (req, res) {
